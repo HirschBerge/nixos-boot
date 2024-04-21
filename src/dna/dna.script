@@ -3,6 +3,14 @@
 ## Github : @adi1090x
 ## Reddit : @adi1090x
 
+# display NixOS logo
+nixos_image = Image("nixos-logo.png"); # change filename accordingly
+nixos_sprite = Sprite();
+
+nixos_sprite.SetImage(nixos_image);
+nixos_sprite.SetX(Window.GetX() + (Window.GetWidth() / 2 - nixos_image.GetWidth() / 2)); # center the image horizontally
+nixos_sprite.SetY(Window.GetHeight() - nixos_image.GetHeight() - 50); # display just above the bottom of the screen
+
 // Screen size
 screen.w = Window.GetWidth(0);
 screen.h = Window.GetHeight(0);
