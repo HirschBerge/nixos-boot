@@ -1,6 +1,11 @@
+let
+  pkgs = import <nixpkgs> {};
+  lib = pkgs.lib;
+in
 {
-  pkgs ? import <nixpkgs> {},
-  theme ? "load_unload", # TODO: Should be a list when more themes come
+  pkgs ? pkgs,
+  theme ? (lib.types.str.default("load_unload")), # Specify a default value and the type as string
+  # theme ? "load_unload", # TODO: Should be a list when more themes come
   bgColor ? "1, 1, 1", # rgb value between 0-1. TODO: Write hex to plymouth magic
 }:
 pkgs.stdenv.mkDerivation rec {
