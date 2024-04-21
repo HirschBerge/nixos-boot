@@ -20,8 +20,9 @@ in
     default = 255;
   };
   options.nixos-boot.theme = lib.mkOption {
-    type    = lib.types.enum [ "load_unload" ];
+    type    = lib.types.str;
     default = "load_unload";
+    description = "The theme for NixOS boot.";
   };
   options.nixos-boot.duration = lib.mkOption {
     type    = lib.types.float;
