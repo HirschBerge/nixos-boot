@@ -71,6 +71,11 @@ Enable nixos-boot in your configuration:
 # Themes
 
 ## load_unload
+Default NixOs loading
+## DNA
+Double Helix Theme
+## Dragon
+A cool dragon.
 
 The first theme, load & unload:
 
